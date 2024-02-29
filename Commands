@@ -1,0 +1,29 @@
+Make new folder- mkdir(name)
+Change folder- cd(name)
+
+django-admin startproject (projectname)-create django project
+python3 manage.py runserver
+python3 manage.py createsuperuser
+python3 manage.py migrate (run migartions)
+python3 manage.py makemigrations
+........
+create media dir in project,
+in settings.py 
+{..import os...},
+{..   MEDIA_URL = '/media/'..
+..MEDIA_ROOT = os.path.join(BASE_DIR, 'media')..  }, 
+
+...........
+in urls.py
+from django.conf.urls.static import static
+from django.conf import settings
+{ ..]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT). }
+...
+form)
+ <form action="/insert" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+...
+for images model
+  image = models.ImageField(upload_to='uploads/images', default="logo.png")
+
